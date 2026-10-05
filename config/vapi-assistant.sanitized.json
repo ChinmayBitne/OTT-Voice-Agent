@@ -1,0 +1,228 @@
+{
+  "version": {
+    "version": "v1",
+    "createdAt": "2026-10-05T19:02:12.243Z"
+  },
+  "assistant": {
+    "name": "Valentina",
+    "voice": {
+      "voiceId": "REPLACE_WITH_YOUR_VOICE_ID",
+      "provider": "11labs",
+      "stability": 0.5,
+      "similarityBoost": 0.75
+    },
+    "model": {
+      "model": "gpt-3.5-turbo",
+      "messages": [
+        {
+          "role": "system",
+          "content": "##Objective\nYou are a voice AI agent engaging in a human-like voice conversation with the user. You will respond based on your given instruction and the provided transcript and be as human-like as possible\n\n## Response Guideline\n- [Overcome ASR errors] This is a real-time transcript, expect there to be errors. If you can guess what the user is trying to say, then guess and respond. When you must ask for clarification, pretend that you heard the voice and be colloquial (use phrases like \"didn\\'t catch that\", \"some noise\", \"pardon\", \"you\\'re coming through choppy\", \"static in your speech\", \"voice is cutting in and out\"). Do not ever mention \"transcription error\", and don\\'t repeat yourself.\n\n- [Always stick to your role] Think about what your role can and cannot do. If your role cannot do something, try to steer the conversation back to the goal of the conversation and to your role. Don\\'t repeat yourself in doing this. You should still be creative, human-like, and lively.\n- [Create smooth conversation] Your response should both fit your role and fit into the live calling session to create a human-like conversation.\n\n##Task - \nAs an assistant of Test OTT Platform, your job is to help users with specific instructions and useful tips.\nThe first thing that you need to do before giving any information or when a user asks you a question about a anything, the first thing you should do is ask the user about the Username, and convert the input Username into a string with each letter small and its without whitespace. After you got the Username, you should then ask for Password based on this Username and its a number without whitespace. Use \"Password\" to verify the password and the process further.\nIf the Username or Password not found or incorrect then tell them to retry once or else reply them that we could not process further and end the call. \nAfter successfully getting both Username and Password, Greet the user with the Name associated with the Username and Password by calling the function \"Name\". Then ask how may I help you.\nIf the user wants to know the phone number, you should call the function \"Phone_Number\". \nIf the user wants to know the email id, you should call the function \"Email_Id\"\nIf the user wants to know the watch history, you should call the function \"Watch_History\".\nIf the user wants to know their wishlist, you should call the function \"Wishlist\".\nIf the user wants to know their subscription plan, you should call the function \"Subscription_Plan\".\nIf the user wants to know what are their favorites, you should call the function \"Favorite_Genres\".\n\nIf the user want to know something or have a query, you should call the function \"Ask\" and pass the specific query in it,\nand answer professionally also it should be human-like conversation.\n\n##Conversational Style: Communicate concisely and conversationally. Aim for responses fluently, clear prose.\n\n##Personality: A happy and joyful assistant who is happy to help people."
+        }
+      ],
+      "provider": "openai",
+      "functions": [
+        {
+          "name": "Name",
+          "async": false,
+          "serverUrl": "https://example.invalid/account",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "Username": {
+                "type": "string",
+                "description": "Used to get the Name associated with the username"
+              },
+              "Column_Name": {
+                "type": "string",
+                "description": "B"
+              }
+            }
+          },
+          "description": "To get the name of the user"
+        },
+        {
+          "name": "Password",
+          "async": false,
+          "serverUrl": "https://example.invalid/account",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "Username": {
+                "type": "string",
+                "description": "Used to authenticate the user with password associated with the username "
+              },
+              "Column_Name": {
+                "type": "string",
+                "description": "D"
+              }
+            }
+          },
+          "description": "To authenticate the user using Password"
+        },
+        {
+          "name": "Subscription_Plan",
+          "async": false,
+          "serverUrl": "https://example.invalid/account",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "Username": {
+                "type": "string",
+                "description": "Used to get the subscription plan associated with the username"
+              },
+              "Column_Name": {
+                "type": "string",
+                "description": "H"
+              }
+            }
+          },
+          "description": "To get the users subscription plan info"
+        },
+        {
+          "name": "Watch_History",
+          "async": false,
+          "serverUrl": "https://example.invalid/account",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "Username": {
+                "type": "string",
+                "description": "Used to get the watch history associated with the username"
+              },
+              "Column_Name": {
+                "type": "string",
+                "description": "E"
+              }
+            }
+          },
+          "description": "To get the users watch history"
+        },
+        {
+          "name": "Wishlist",
+          "async": false,
+          "serverUrl": "https://example.invalid/account",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "Username": {
+                "type": "string",
+                "description": "Used to get the wishlist associated with the username"
+              },
+              "Column_Name": {
+                "type": "string",
+                "description": "F"
+              }
+            }
+          },
+          "description": "To get the users wishlist"
+        },
+        {
+          "name": "Phone_Number",
+          "async": false,
+          "serverUrl": "https://example.invalid/account",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "Username": {
+                "type": "string",
+                "description": "Used to get the phone number associated with the username"
+              },
+              "Column_Name": {
+                "type": "string",
+                "description": "C"
+              }
+            }
+          },
+          "description": "To get the users phone number"
+        },
+        {
+          "name": "Email_Id",
+          "async": false,
+          "serverUrl": "https://example.invalid/account",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "Username": {
+                "type": "string",
+                "description": "Used to get the email id associated with the username"
+              },
+              "Column_Name": {
+                "type": "string",
+                "description": "I"
+              }
+            }
+          },
+          "description": "To get the users Email ID"
+        },
+        {
+          "name": "Favorite_Genres",
+          "async": false,
+          "serverUrl": "https://example.invalid/account",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "Username": {
+                "type": "string",
+                "description": "Used to get the favorite genres associated with the username"
+              },
+              "Column_Name": {
+                "type": "string",
+                "description": "G"
+              }
+            }
+          },
+          "description": "To get the favorite genres of the user"
+        },
+        {
+          "name": "Ask",
+          "async": false,
+          "serverUrl": "https://example.invalid/faq",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "Question": {
+                "type": "string",
+                "description": "Users Query Regarding OTT Platform"
+              }
+            }
+          },
+          "description": "The query or FAQ regarding OTT platform from user"
+        }
+      ],
+      "maxTokens": 250,
+      "temperature": 0.7,
+      "emotionRecognitionEnabled": true
+    },
+    "recordingEnabled": true,
+    "firstMessage": "Hello!! I'm Valentina,  welcome to the test OTT platform.",
+    "voicemailMessage": "Please leave a message with the wind, and I shall return your call with the whisper of the leaves.",
+    "endCallFunctionEnabled": true,
+    "endCallMessage": "Goodbye! Have a Great day dear.",
+    "transcriber": {
+      "model": "nova-2",
+      "language": "en",
+      "provider": "deepgram"
+    },
+    "clientMessages": [
+      "transcript",
+      "hang",
+      "function-call",
+      "speech-update",
+      "metadata",
+      "conversation-update"
+    ],
+    "serverMessages": [
+      "end-of-call-report",
+      "status-update",
+      "hang",
+      "function-call"
+    ],
+    "dialKeypadFunctionEnabled": false,
+    "endCallPhrases": [
+      "Goodbye",
+      "Have a great day dear!"
+    ],
+    "hipaaEnabled": false,
+    "voicemailDetectionEnabled": false
+  }
+}

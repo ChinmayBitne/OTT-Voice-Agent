@@ -1,0 +1,750 @@
+{
+  "name": "A1",
+  "flow": [
+    {
+      "id": 12,
+      "module": "gateway:CustomWebHook",
+      "version": 1,
+      "parameters": {
+        "hook": 0,
+        "maxResults": 1
+      },
+      "mapper": {},
+      "metadata": {
+        "designer": {
+          "x": -382,
+          "y": -4
+        },
+        "parameters": [
+          {
+            "name": "hook",
+            "type": "hook:gateway-webhook",
+            "label": "Webhook",
+            "required": true
+          },
+          {
+            "name": "maxResults",
+            "type": "number",
+            "label": "Maximum number of results"
+          }
+        ],
+        "interface": [
+          {
+            "name": "message",
+            "spec": [
+              {
+                "name": "type",
+                "type": "text"
+              },
+              {
+                "name": "functionCall",
+                "spec": [
+                  {
+                    "name": "name",
+                    "type": "text"
+                  },
+                  {
+                    "name": "parameters",
+                    "spec": [
+                      {
+                        "name": "Question",
+                        "type": "text"
+                      }
+                    ],
+                    "type": "collection"
+                  }
+                ],
+                "type": "collection"
+              },
+              {
+                "name": "timestamp",
+                "type": "text"
+              },
+              {
+                "name": "call",
+                "spec": [
+                  {
+                    "name": "id",
+                    "type": "text"
+                  },
+                  {
+                    "name": "type",
+                    "type": "text"
+                  },
+                  {
+                    "name": "startedAt",
+                    "type": "text"
+                  },
+                  {
+                    "name": "createdAt",
+                    "type": "text"
+                  },
+                  {
+                    "name": "updatedAt",
+                    "type": "text"
+                  },
+                  {
+                    "name": "orgId",
+                    "type": "text"
+                  },
+                  {
+                    "name": "cost",
+                    "type": "number"
+                  },
+                  {
+                    "name": "webCallUrl",
+                    "type": "text"
+                  },
+                  {
+                    "name": "assistant",
+                    "spec": [
+                      {
+                        "name": "name",
+                        "type": "text"
+                      },
+                      {
+                        "name": "model",
+                        "spec": [
+                          {
+                            "name": "model",
+                            "type": "text"
+                          },
+                          {
+                            "name": "messages",
+                            "spec": {
+                              "spec": [
+                                {
+                                  "name": "role",
+                                  "type": "text"
+                                },
+                                {
+                                  "name": "content",
+                                  "type": "text"
+                                }
+                              ],
+                              "type": "collection"
+                            },
+                            "type": "array"
+                          },
+                          {
+                            "name": "provider",
+                            "type": "text"
+                          },
+                          {
+                            "name": "functions",
+                            "spec": {
+                              "spec": [
+                                {
+                                  "name": "name",
+                                  "type": "text"
+                                },
+                                {
+                                  "name": "async",
+                                  "type": "boolean"
+                                },
+                                {
+                                  "name": "serverUrl",
+                                  "type": "text"
+                                },
+                                {
+                                  "name": "parameters",
+                                  "spec": [
+                                    {
+                                      "name": "type",
+                                      "type": "text"
+                                    },
+                                    {
+                                      "name": "properties",
+                                      "spec": [
+                                        {
+                                          "name": "Question",
+                                          "spec": [
+                                            {
+                                              "name": "type",
+                                              "type": "text"
+                                            },
+                                            {
+                                              "name": "description",
+                                              "type": "text"
+                                            }
+                                          ],
+                                          "type": "collection"
+                                        }
+                                      ],
+                                      "type": "collection"
+                                    }
+                                  ],
+                                  "type": "collection"
+                                },
+                                {
+                                  "name": "description",
+                                  "type": "text"
+                                }
+                              ],
+                              "type": "collection"
+                            },
+                            "type": "array"
+                          },
+                          {
+                            "name": "maxTokens",
+                            "type": "number"
+                          },
+                          {
+                            "name": "temperature",
+                            "type": "number"
+                          }
+                        ],
+                        "type": "collection"
+                      },
+                      {
+                        "name": "voice",
+                        "spec": [
+                          {
+                            "name": "voiceId",
+                            "type": "text"
+                          },
+                          {
+                            "name": "provider",
+                            "type": "text"
+                          },
+                          {
+                            "name": "stability",
+                            "type": "number"
+                          },
+                          {
+                            "name": "similarityBoost",
+                            "type": "number"
+                          }
+                        ],
+                        "type": "collection"
+                      },
+                      {
+                        "name": "parentId",
+                        "type": "text"
+                      },
+                      {
+                        "name": "transcriber",
+                        "spec": [
+                          {
+                            "name": "model",
+                            "type": "text"
+                          },
+                          {
+                            "name": "language",
+                            "type": "text"
+                          },
+                          {
+                            "name": "provider",
+                            "type": "text"
+                          }
+                        ],
+                        "type": "collection"
+                      },
+                      {
+                        "name": "firstMessage",
+                        "type": "text"
+                      },
+                      {
+                        "name": "hipaaEnabled",
+                        "type": "boolean"
+                      },
+                      {
+                        "name": "clientMessages",
+                        "spec": {
+                          "type": "text"
+                        },
+                        "type": "array"
+                      },
+                      {
+                        "name": "endCallMessage",
+                        "type": "text"
+                      },
+                      {
+                        "name": "endCallPhrases",
+                        "type": "array"
+                      },
+                      {
+                        "name": "serverMessages",
+                        "spec": {
+                          "type": "text"
+                        },
+                        "type": "array"
+                      },
+                      {
+                        "name": "recordingEnabled",
+                        "type": "boolean"
+                      },
+                      {
+                        "name": "voicemailMessage",
+                        "type": "text"
+                      },
+                      {
+                        "name": "endCallFunctionEnabled",
+                        "type": "boolean"
+                      },
+                      {
+                        "name": "dialKeypadFunctionEnabled",
+                        "type": "boolean"
+                      },
+                      {
+                        "name": "voicemailDetectionEnabled",
+                        "type": "boolean"
+                      }
+                    ],
+                    "type": "collection"
+                  },
+                  {
+                    "name": "status",
+                    "type": "text"
+                  }
+                ],
+                "type": "collection"
+              }
+            ],
+            "type": "collection"
+          }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "module": "google-docs:getADocument",
+      "version": 1,
+      "parameters": {
+        "__IMTCONN__": 0
+      },
+      "mapper": {
+        "filter": "image",
+        "select": "dropdown",
+        "document": "REPLACE_WITH_YOUR_DOCUMENT_ID",
+        "destination": "drive"
+      },
+      "metadata": {
+        "designer": {
+          "x": -74,
+          "y": -9
+        },
+        "parameters": [
+          {
+            "name": "__IMTCONN__",
+            "type": "account:google",
+            "label": "Connection",
+            "required": true
+          }
+        ],
+        "expect": [
+          {
+            "name": "select",
+            "type": "select",
+            "label": "Get Content of a Document",
+            "required": true,
+            "validate": {
+              "enum": [
+                "map",
+                "dropdown"
+              ]
+            }
+          },
+          {
+            "name": "filter",
+            "type": "select",
+            "label": "Filter",
+            "required": true,
+            "validate": {
+              "enum": [
+                "image",
+                "drawing",
+                "chart"
+              ]
+            }
+          },
+          {
+            "name": "destination",
+            "type": "select",
+            "label": "Choose a Drive",
+            "required": true,
+            "validate": {
+              "enum": [
+                "drive",
+                "share",
+                "team"
+              ]
+            }
+          },
+          {
+            "name": "document",
+            "type": "file",
+            "label": "Document ID",
+            "required": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "module": "openai-gpt-3:CreateCompletion",
+      "version": 1,
+      "parameters": {
+        "__IMTCONN__": 0
+      },
+      "mapper": {
+        "model": "gpt-3.5-turbo",
+        "top_p": "1",
+        "select": "chat",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are an OTT platform assistant, so learn everything from {{4.text}}. And just answer the question based on that only, simply just say 'Sorry I don't know about it', if the user ask question regarding context other than provided."
+          },
+          {
+            "role": "user",
+            "content": "{{12.message.functionCall.parameters.Question}}"
+          }
+        ],
+        "max_tokens": "4096",
+        "temperature": "1",
+        "n_completions": "1",
+        "response_format": "text"
+      },
+      "metadata": {
+        "designer": {
+          "x": 231,
+          "y": -12
+        },
+        "parameters": [
+          {
+            "name": "__IMTCONN__",
+            "type": "account:openai-gpt-3",
+            "label": "Connection",
+            "required": true
+          }
+        ],
+        "expect": [
+          {
+            "name": "select",
+            "type": "select",
+            "label": "Select Method",
+            "required": true,
+            "validate": {
+              "enum": [
+                "chat",
+                "prompt"
+              ]
+            }
+          },
+          {
+            "name": "max_tokens",
+            "type": "number",
+            "label": "Max Tokens",
+            "required": true
+          },
+          {
+            "name": "temperature",
+            "type": "number",
+            "label": "Temperature",
+            "validate": {
+              "max": 2,
+              "min": 0
+            }
+          },
+          {
+            "name": "top_p",
+            "type": "number",
+            "label": "Top P",
+            "validate": {
+              "max": 1,
+              "min": 0
+            }
+          },
+          {
+            "name": "n_completions",
+            "type": "number",
+            "label": "Number"
+          },
+          {
+            "name": "frequency_penalty",
+            "type": "number",
+            "label": "Frequency Penalty",
+            "validate": {
+              "max": 2,
+              "min": -2
+            }
+          },
+          {
+            "name": "presence_penalty",
+            "type": "number",
+            "label": "Presence Penalty",
+            "validate": {
+              "max": 2,
+              "min": -2
+            }
+          },
+          {
+            "name": "logit_bias",
+            "spec": {
+              "name": "value",
+              "spec": [
+                {
+                  "name": "token",
+                  "type": "text",
+                  "label": "Token ID",
+                  "required": true
+                },
+                {
+                  "name": "probability",
+                  "type": "number",
+                  "label": "Probability",
+                  "required": true,
+                  "validate": {
+                    "max": 100,
+                    "min": -100
+                  }
+                }
+              ],
+              "type": "collection",
+              "label": "Token Probability"
+            },
+            "type": "array",
+            "label": "Token Probability"
+          },
+          {
+            "name": "response_format",
+            "type": "select",
+            "label": "Response Format",
+            "validate": {
+              "enum": [
+                "text",
+                "json_object"
+              ]
+            }
+          },
+          {
+            "name": "seed",
+            "type": "integer",
+            "label": "Seed"
+          },
+          {
+            "name": "stop",
+            "spec": {
+              "name": "value",
+              "type": "text",
+              "label": "Stop Sequence"
+            },
+            "type": "array",
+            "label": "Stop Sequences",
+            "validate": {
+              "maxItems": 4
+            }
+          },
+          {
+            "name": "additionalParameters",
+            "spec": {
+              "name": "value",
+              "spec": [
+                {
+                  "name": "key",
+                  "type": "text",
+                  "label": "Parameter Name",
+                  "required": true
+                },
+                {
+                  "name": "type",
+                  "type": "select",
+                  "label": "Input Type",
+                  "options": [
+                    {
+                      "label": "Text",
+                      "value": "text",
+                      "nested": [
+                        {
+                          "name": "value",
+                          "type": "text",
+                          "label": "Parameter Value"
+                        }
+                      ],
+                      "default": true
+                    },
+                    {
+                      "label": "Number",
+                      "value": "number",
+                      "nested": [
+                        {
+                          "name": "value",
+                          "type": "number",
+                          "label": "Parameter Value"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "Boolean",
+                      "value": "boolean",
+                      "nested": [
+                        {
+                          "name": "value",
+                          "type": "boolean",
+                          "label": "Parameter Value"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "Date",
+                      "value": "date",
+                      "nested": [
+                        {
+                          "name": "value",
+                          "type": "date",
+                          "label": "Parameter Value"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "Any",
+                      "value": "any",
+                      "nested": [
+                        {
+                          "name": "value",
+                          "type": "any",
+                          "label": "Parameter Value"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "type": "collection",
+              "label": "Input Parameter"
+            },
+            "type": "array",
+            "label": "Other Input Parameters"
+          },
+          {
+            "name": "model",
+            "type": "select",
+            "label": "Model",
+            "required": true
+          },
+          {
+            "name": "messages",
+            "spec": {
+              "name": "value",
+              "spec": [
+                {
+                  "name": "role",
+                  "type": "select",
+                  "label": "Role",
+                  "options": [
+                    {
+                      "label": "System",
+                      "value": "system"
+                    },
+                    {
+                      "label": "User",
+                      "value": "user"
+                    },
+                    {
+                      "label": "Assistant",
+                      "value": "assistant"
+                    }
+                  ],
+                  "required": true
+                },
+                {
+                  "name": "content",
+                  "type": "text",
+                  "label": "Message Content"
+                }
+              ],
+              "type": "collection",
+              "label": "Message"
+            },
+            "type": "array",
+            "label": "Messages",
+            "required": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "module": "gateway:WebhookRespond",
+      "version": 1,
+      "parameters": {},
+      "mapper": {
+        "body": "{{6.choices[].message.content}}",
+        "status": "200",
+        "headers": []
+      },
+      "metadata": {
+        "designer": {
+          "x": 522,
+          "y": -7
+        },
+        "expect": [
+          {
+            "name": "status",
+            "type": "uinteger",
+            "label": "Status",
+            "required": true,
+            "validate": {
+              "min": 100
+            }
+          },
+          {
+            "name": "body",
+            "type": "any",
+            "label": "Body"
+          },
+          {
+            "name": "headers",
+            "spec": [
+              {
+                "name": "key",
+                "type": "text",
+                "label": "Key",
+                "required": true,
+                "validate": {
+                  "max": 256
+                }
+              },
+              {
+                "name": "value",
+                "type": "text",
+                "label": "Value",
+                "required": true,
+                "validate": {
+                  "max": 4096
+                }
+              }
+            ],
+            "type": "array",
+            "label": "Custom headers",
+            "validate": {
+              "maxItems": 16
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "metadata": {
+    "instant": true,
+    "version": 1,
+    "scenario": {
+      "roundtrips": 1,
+      "maxErrors": 3,
+      "autoCommit": true,
+      "autoCommitTriggerLast": true,
+      "sequential": false,
+      "slots": null,
+      "confidential": false,
+      "dataloss": false,
+      "dlq": false,
+      "freshVariables": false
+    },
+    "designer": {
+      "orphans": []
+    },
+    "zone": "us1.make.com",
+    "notes": []
+  }
+}
