@@ -4,6 +4,12 @@ A voice-agent prototype that connects streaming-service customer support with te
 
 **Built in 2024.**
 
+## Demo video
+
+[Watch the Valentina voice-agent demo](https://chinmaybitne.github.io/videos/ott-voice-agent-demo.mp4) · [Portfolio case study](https://chinmaybitne.github.io/projects/ott-voice-agent/) · [Video file in this repository](media/ott-voice-agent-demo.mp4)
+
+The 4:46 recording demonstrates the original interaction. The published copy hides the test-account table and resource identifiers, and mutes the spoken test-password segment (00:26–00:34).
+
 ## What the demo shows
 
 - A conversational test-account verification flow followed by a personalized greeting.
@@ -49,6 +55,6 @@ The account functions are `Password`, `Name`, `Subscription_Plan`, `Watch_Histor
 
 This is a documented prototype with sanitized configuration. The supplied video demonstrates a successful conversation. The exports have been inspected and parsed locally, but have not been re-imported into Vapi or Make, and no current live integration has been tested.
 
-All original webhook endpoints, Google document/spreadsheet identifiers, connection references, and the voice identifier have been replaced or removed. The original video and account sheet are not included because they display account data and a test password.
+All original webhook endpoints, Google document/spreadsheet identifiers, connection references, and the voice identifier have been replaced or removed. A sanitized demo video is included; the original recording and account sheet are excluded because they display account data and a test password.
 
 Read [setup and limitations](docs/setup-and-limitations.md) before experimenting with these examples. They are disconnected configuration references, not a production authentication template.

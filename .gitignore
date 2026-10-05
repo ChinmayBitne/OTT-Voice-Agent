@@ -2,6 +2,7 @@
 .env.*
 !.env.example
 *.mp4
+!media/ott-voice-agent-demo.mp4
 *.wav
 *.mp3
 __pycache__/

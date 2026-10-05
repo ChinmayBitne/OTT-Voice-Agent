@@ -1,6 +1,6 @@
 # Recorded demo walkthrough
 
-Source: the author's `OTT BOT.mp4`, approximately 4:46 long. Times come from automated speech recognition and are approximate. The recording is not bundled, and credentials/contact details are omitted here.
+Source: the author's `OTT BOT.mp4`, approximately 4:46 long. Times come from automated speech recognition and are approximate. A [sanitized recording](../media/ott-voice-agent-demo.mp4) is bundled: browser/resource identifiers and the account table are hidden, and the test-password audio at 00:26–00:34 is muted. Credentials/contact details are omitted here.
 
 | Time | Demonstrated behavior |
 | --- | --- |
